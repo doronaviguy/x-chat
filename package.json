@@ -1,10 +1,15 @@
 {
-     "name": "mukhin_chat",
-     "description": "example chat application with socket.io",
-     "version": "0.0.1",
+    "name": "doron-chat",
+    "version": "0.0.3",
+    "description": "example chat application with socket.io",
+    "version": "0.0.1",
     "main": "app.js",
      "dependencies": {
-        "express": "",
-        "socket.io": ""
-     }
+        "express": "~3.4.x"
+     },
+    "engines": {
+        "node": "0.10.x",
+        "npm": "1.3.x"
+    },
 }
+
