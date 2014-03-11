@@ -18,16 +18,16 @@
   <script src="controllers/chatCtrl.js"></script>
   <script src="controllers/welcomeCtrl.js"></script>
   <script src="directives/directives.js"></script>
-  
+
 
 </head>
 <body ng-controller="chatCtrl">
   <div id="container"  >
-    <div id="chat-title">Chat</div>
+    <div id="chat-title">Chat {{room}}</div>
     <div id="choose-name" class="popup " ng-controller="welcomeCtrl"  ng-class="{false:'pop-in', true:'pop-out'}[state.welcomeShwn]">
         <span>state {{state.welcomeShwn}}</span>
       <div id="username-form">
-        <input type="text" id="username-text" tabindex="-1" required ng-enter="init()" focus="!state.welcomeShwn" 
+        <input type="text" id="username-text" tabindex="-1" required ng-enter="init()" focus="!state.welcomeShwn"
                placeholder="Enter a username" ng-model="name" autocomplete="off">
         <button id="btn-go" ng-click="init()" >go</button>
       </div>
