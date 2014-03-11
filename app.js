@@ -4,9 +4,9 @@ var express = require('express'),
 	server = http.createServer(app),
 	websockets = require('./websockets').init(server);
 
-console.log("app listeneing on 8080");
-var port = process.env.PORT || 5000;
 
+var port = process.env.PORT || 5000;
+console.log("app listeneing on %d", port);
 server.listen(port);
 
 app.use(express.static('./public'));
