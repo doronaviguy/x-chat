@@ -77,23 +77,23 @@
 
 	* {
 	  /* prevent callout when holding tap on links (the native dialog that comes up) */
-	  -webkit-touch-callout: none; 
+	  -webkit-touch-callout: none;
 	  /* prevent webkit from resizing text to fit */
-	  -webkit-text-size-adjust: none; 
+	  -webkit-text-size-adjust: none;
 	  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 	  -webkit-tap-highlight-color: rgba(0,0,0,0);
 	  /* prevent copy paste, to allow, change 'none' to 'text' */
-	  -webkit-user-select: none;  
+	  -webkit-user-select: none;
 	}
 
 	textarea, select, input {
 		-webkit-user-select: auto !important;
 	}
 
-	
+
 	input[type="checkbox"] { -webkit-appearance: none; }
 
-	
+
 	input::-webkit-input-placeholder { opacity: .8; }
 
 /* 	==|== Images ====================================================== */
@@ -142,15 +142,16 @@
 	--------------------- */
 
 	body { background: #f9f9f9; font-family: 'Open Sans', sans-serif; }
-	.fullscreen { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 10; -webkit-transform: translate3d(0px, 0px, 0px); }	
+	.fullscreen { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 10; -webkit-transform: translate3d(0px, 0px, 0px); }
 	.loading { background-image: url(../images/loader.gif); background-position: center; background-repeat: no-repeat; background-size: 32px; }
 	.loading.subview { min-height: 300px; }
 	#scroller { position: absolute; overflow: auto;  -webkit-overflow-scrolling: touch; background: #efefef ; top: 30px; bottom: 50px; left: 0px; right: 0px;}
 	#container { max-width: 480px; margin: 0 auto; /* position: relative; */ }
-  #usersCntnr { width: 300px; height: 675px; position: absolute; left: 0px; top: 0px; background-color:#efefef; padding:10px; margin:10px; display:none;}
-  #users { font-size:32px; }
-#chat-title { position: absolute; top:0px; left:0px; right:0px; height: 30px; font-size:20px;  background-color:#55aa9f}
-.btn.cmnt { background-image:url('comment.png'); width:64px; height:64px; background-position:center; background-repeat:no-repeat}
+  	#usersCntnr { width: 300px; height: 675px; position: absolute; left: 0px; top: 0px; background-color:#efefef; padding:10px; margin:10px; display:none;}
+  	#users { font-size:32px; }
+	#chat-title { position: absolute; top:0px; left:0px; right:0px; height: 30px; font-size:20px;  background-color:#55aa9f; padding: 0 30px;}
+	.popup-title { padding: 20px 5px;}
+	.btn.cmnt { background-image:url('comment.png'); width:64px; height:64px; background-position:center; background-repeat:no-repeat}
 	/* Error Message
 	--------------------- */
 	.error-message { text-align: center; padding: 0; position: absolute; top: 50%; left: 0; right: 0; margin-top: -30px; }
@@ -170,13 +171,13 @@
 	/* Messages
 	--------------------- */
     .chat-container {
-    position: absolute;
- 
-    top: 0px;
-    bottom: 0px;
-    left: 25%;
-    right: 25%;
-}
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 10%;
+		right: 10%;
+	}
+
 	#messages { list-style: none; padding: 10px 10px 0 10px; margin: 0; overflow: hidden }
 	.message { position: relative; margin: 0 0 15px 0; min-height: 34px; overflow: hidden }
 	.message .block { position: relative; float: left; padding: 8px 10px; margin-left: 15px; border-radius: 5px; background: #fff; box-shadow: 1px 1px 0px rgba(0,0,0,0.05) }
@@ -205,22 +206,22 @@
 
 	@-webkit-keyframes pop-in {
 		0% { -webkit-transform: scale(0.8); opacity: 0; }
-		100% { -webkit-transform: scale(1); opacity: 1; } 
+		100% { -webkit-transform: scale(1); opacity: 1; }
 	}
 
 	@-webkit-keyframes pop-out {
 		0% { -webkit-transform: scale(1); opacity: 1; }
-		100% { -webkit-transform: scale(0.8); opacity: 0; } 
+		100% { -webkit-transform: scale(0.8); opacity: 0; }
 	}
 
 	@-webkit-keyframes fade-in {
 		0% { opacity: 0; }
-		100% { opacity: 1; } 
+		100% { opacity: 1; }
 	}
 
 	@-webkit-keyframes fade-out {
 		0% { opacity: 1; }
-		100% { opacity: 0; } 
+		100% { opacity: 0; }
 	}
 
 	.pop-in { -webkit-animation: pop-in 200ms; display: block !important; opacity: 1 !important; }
