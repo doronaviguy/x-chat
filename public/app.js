@@ -1,13 +1,9 @@
 
-var app = angular.module('app', ['ui.router', 'btford.socket-io']);
+var app = angular.module('app', []);
 
 
-app.run(['socket', function (socket) {
-    socket.forward('error');
-    socket.forward('error');
-    socket.forward('sendchat');
-    socket.forward('updatechat');
-    socket.forward('updateusers');
+app.run([function () {
+
 }]);
 
 
