@@ -14,11 +14,17 @@ angular.module('app').controller('chatCtrl',['$scope', 'chatApi', 'session', fun
     };
 
 
-    chatApi.onUpdateChat(function (ev, data) {
+    chatApi.onUpdateChat(function (data) {
         console.log('updatechat ' + data );
         if(typeof data === 'string')
             return;
-        $scope.messages.push({username: data.username, data: data.data, isMe: session.getUser().username === data.username});
+
+        $scope.messages.push({
+            username: data.username,
+            data: data.data,
+            isMe: session.getUser().username === data.username
+            }
+        );
     });
 
     chatApi.onUpdateUsers(function (ev, data) {

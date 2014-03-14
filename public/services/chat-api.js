@@ -15,7 +15,7 @@ angular.module('app').factory('chatApi',['socket', '$q', function(socket, $q) {
         socket.emit('sendchat', data);
     }
     function addUser(newUser) {
-        socket.on('adduser', newUser);
+        socket.emit('adduser', newUser);
     }
 
     return {
