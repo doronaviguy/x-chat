@@ -2,7 +2,7 @@
 
 exports.init = function (server) {
   console.log("websockets init");
-  var io = require('socket.io').listen(server, { log: true });
+  var io = require('socket.io').listen(server, { log: false });
   console.log("websockets init OK");
 
 
