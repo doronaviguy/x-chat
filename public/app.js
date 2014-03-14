@@ -1,5 +1,5 @@
 
-var app = angular.module('app', ['btford.socket-io']);
+var app = angular.module('app', ['ui.router', 'btford.socket-io']);
 
 
 app.run(['socket', function (socket) {
@@ -33,7 +33,7 @@ app.run(['socket', function (socket) {
 
 
 //  $("#btn-go").on('touchstart click', function () {
-      
+
 //    $("#choose-name").removeClass('pop-in').addClass('pop-out');
 //    $("#overlay").removeClass('fade-in').addClass('fade-out');
 //    var user = $("#username-text").val() || 'empty';
@@ -42,7 +42,7 @@ app.run(['socket', function (socket) {
 //    localStorage.username = user;
 //  });
 
-  
+
 //});
 
 //function switchRoom(room) {
