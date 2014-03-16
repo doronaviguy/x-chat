@@ -24,8 +24,7 @@ app.get('/:room', function (req, res) {
 });
 
 function getIndex () {
-
-	return process.env.envioremnt === 'production' ?
+	return process.env.NODE_ENV == 'production' ?
 		path.join(__dirname,'public','dist','index.html') :  path.join(__dirname,'public','index.html');
 }
 
