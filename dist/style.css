@@ -1,0 +1,240 @@
+/* HTML5 Boilerplate  */
+
+	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+	audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+	audio:not([controls]) { display: none; }
+	[hidden] { display: none; }
+
+	html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+	html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+	body { margin: 0; font-size: 1em; line-height: 1.4; }
+	body, html { overflow: hidden; }
+
+	::-moz-selection { background: #cacaca; text-shadow: none; }
+	::selection { background: #cacaca; text-shadow: none; }
+
+	a { color: #00e; }
+	a:visited { color: #551a8b; }
+	a:hover { color: #06e; }
+	a:focus { outline: thin dotted; }
+	a:hover, a:active { outline: 0; }
+	abbr[title], dfn[title] { border-bottom: 1px dotted #cacaca; cursor: help; }
+	b, strong { font-weight: bold; }
+	blockquote { margin: 1em 40px; }
+	dfn { font-style: italic; }
+	hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+	ins { background: #ff9; color: #000; text-decoration: none; }
+	mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+	pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+	code { padding: 1px 4px; font-size: 90%; color: #D14; background-color: #F7F7F9; border: 1px solid #E1E1E8; border-radius: 3px; -webkit-border-radius: 3px; }
+	pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+	q { quotes: none; }
+	q:before, q:after { content: ""; content: none; }
+	small { font-size: 85%; }
+	sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+	sup { top: -0.5em; }
+	sub { bottom: -0.25em; }
+
+	ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+	dd { margin: 0 0 0 40px; }
+	nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+	img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+	svg:not(:root) { overflow: hidden; }
+	figure { margin: 0; }
+
+	form { margin: 0; }
+	fieldset { border: 0; margin: 0; padding: 0; }
+
+	label { cursor: pointer; }
+	legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+	button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+	button, input { line-height: normal; }
+	button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+	button[disabled], input[disabled] { cursor: default; }
+	input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+	input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+	input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+	button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+	textarea { overflow: auto; vertical-align: top; resize: vertical; }
+	input:valid, textarea:valid {  }
+	input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+	table { border-collapse: collapse; border-spacing: 0; }
+	td { vertical-align: top; }
+
+	.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+	.hidden { display: none; }
+	.visually-hidden { visibility:hidden; }
+	.offscreen { position: absolute; top: 0; left: -900em; }
+
+	.left { float: left !important; }
+	.right { float: right !important; }
+
+/* 	==|== Mobile Fixes ====================================================== */
+
+	* {
+	  /* prevent callout when holding tap on links (the native dialog that comes up) */
+	  -webkit-touch-callout: none;
+	  /* prevent webkit from resizing text to fit */
+	  -webkit-text-size-adjust: none;
+	  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+	  -webkit-tap-highlight-color: rgba(0,0,0,0);
+	  /* prevent copy paste, to allow, change 'none' to 'text' */
+	  -webkit-user-select: none;
+	}
+
+	textarea, select, input {
+		-webkit-user-select: auto !important;
+	}
+
+
+	input[type="checkbox"] { -webkit-appearance: none; }
+
+
+	input::-webkit-input-placeholder { opacity: .8; }
+
+/* 	==|== Images ====================================================== */
+
+	img {
+	  /* Responsive images (ensure images don't scale beyond their parents) */
+	  max-width: 100%;
+	  /* Part 1: Set a maxium relative to the parent */
+	  width: auto\9;
+	  /* IE7-8 need help adjusting responsive images */
+	  height: auto;
+	  /* Part 2: Scale the height according to the width, otherwise you get stretching */
+	  vertical-align: middle;
+	  border: 0;
+	  -ms-interpolation-mode: bicubic;
+	}
+
+/* 	==|== Content ====================================================== */
+
+	/* Forms
+	--------------------- */
+
+	textarea:focus,
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	input[type="datetime"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="date"]:focus,
+	input[type="month"]:focus,
+	input[type="time"]:focus,
+	input[type="week"]:focus,
+	input[type="number"]:focus,
+	input[type="email"]:focus,
+	input[type="url"]:focus,
+	input[type="search"]:focus,
+	input[type="tel"]:focus,
+	input[type="color"]:focus,
+	.uneditable-input:focus {
+	 	outline: 0;
+	 	outline: none;
+	}
+
+	.btn { position: relative; text-decoration: none; display: inline-block; padding: 8px 20px; width: auto; border: none; margin-bottom: 8px; font-size: 15px; line-height: 22px; text-align: center; vertical-align: middle; cursor: pointer; background-color: #fff; color: #999999; *zoom: 1; }
+
+	/* Global
+	--------------------- */
+
+	body { background: #f9f9f9; font-family: 'Open Sans', sans-serif; }
+	.fullscreen { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 10; -webkit-transform: translate3d(0px, 0px, 0px); }
+	.loading { background-image: url(../images/loader.gif); background-position: center; background-repeat: no-repeat; background-size: 32px; }
+	.loading.subview { min-height: 300px; }
+	#scroller { position: absolute; overflow: auto;  -webkit-overflow-scrolling: touch; background: #efefef ; top: 30px; bottom: 50px; left: 0px; right: 0px;}
+	#container { max-width: 480px; margin: 0 auto; /* position: relative; */ }
+  	#usersCntnr { width: 300px; height: 675px; position: absolute; left: 0px; top: 0px; background-color:#efefef; padding:10px; margin:10px; display:none;}
+  	#users { font-size:32px; }
+	#chat-title { position: absolute; top:0px; left:0px; right:0px; height: 30px; font-size:20px;  background-color:#55aa9f; padding: 0 30px;}
+	.popup-title { padding: 20px 5px;}
+	.btn.cmnt { background-image:url('comment.png'); width:64px; height:64px; background-position:center; background-repeat:no-repeat}
+	/* Error Message
+	--------------------- */
+	.error-message { text-align: center; padding: 0; position: absolute; top: 50%; left: 0; right: 0; margin-top: -30px; }
+	.error-message h2 ,
+	.error-message p { margin: 0; color: #bcbcbc; }
+	.connection-status { max-width: 480px; position: absolute; top: -40px; left: 0; right: 0; z-index: 20; background: #9f0a0a; color: #fff; text-align: center; font-size: 12px; text-transform: uppercase; line-height: 18px; padding: 6px 0; -webkit-transition: top linear 300ms; }
+	.connection-status.visible { top: 0; }
+
+	/* Modals
+	--------------------- */
+	.overlay { display: none; opacity: 0; z-index: 90; position: absolute; top: 30px; right: 0; bottom: 0; left: 0; background: rgba(0,0,0,0.7); }
+	.popup { display: none; opacity: 0; background-color: #55aa9f; width: 240px; height: auto; position: absolute; top: 50%; left: 50%; margin: -60px 0 0 -120px; z-index: 100 }
+	.popup form { padding: 10px; }
+	.popup #username-text { width: 95%; padding: 10px; background-color: #fff; margin: 0 auto; border: none; margin: 5px;}
+	.popup #btn-go { padding: 4px 14px; background-color: #a4d9d2; font-size: 14px; line-height: 28px; text-transform: uppercase; border: none; margin: 0px auto 4px auto; display: block }
+
+	/* Messages
+	--------------------- */
+    .chat-container {
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 10%;
+		right: 10%;
+	}
+
+	#messages { list-style: none; padding: 10px 10px 0 10px; margin: 0; overflow: hidden }
+	.message { position: relative; margin: 0 0 15px 0; min-height: 34px; overflow: hidden }
+	.message .block { position: relative; float: left; padding: 8px 10px; margin-left: 15px; border-radius: 5px; background: #fff; box-shadow: 1px 1px 0px rgba(0,0,0,0.05) }
+	.message .avatar { display: inline; float: left; /* position: absolute; */ /* top: 0; */ /* left: 0; */ }
+	.message .avatar .sphere { display: block; /* width: 34px; */ height: 34px; border-radius: 5px; background: #d9d9d9; box-shadow: 1px 1px 0px rgba(0,0,0,0.05); line-height: 34px; text-align: center; color: #bbb; font-size: 20px; }
+	.message .block:before { content: ''; position: absolute; top: 12px; right: 100%; /* margin-left: -20px; */ border: solid 5px; border-color: transparent #fff transparent transparent }
+	.message p { margin: 0; font-size: 14px; line-height: 18px }
+	.message .date { display: block; font-size: 10px; text-transform: uppercase; margin: 0; }
+	.date-break { z-index: 5; position: relative; font-size: 10px; line-height: 20px; text-align: center; text-transform: uppercase; margin-bottom:5px; color: #cacaca; }
+	/* user */
+	.message.me .block { float: right; margin-left: 0; margin-right: 14px; }
+	.message.me .avatar { float: right }
+	.message.me .block:before { /* top: 12px; */ left: 100%; right: auto; /* margin-right: -20px; */ border-color: transparent transparent transparent #fff }
+
+	/* Chat inputs
+	--------------------- */
+	#chat-bar { position: absolute; bottom: 0px; padding: 0 50px 0 0; background-color: #12141b; height: 50px; overflow: hidden ; left: 0px; right: 0px;}
+	#chat-bar form { background-color: transparent; margin: 14px 10px; padding: 0; }
+	#chat-input { width: 100%; padding: 0; margin: 0; border: none; color: #ddd; background: transparent; resize: none; font-size: 16px; line-height: 20px; margin:12px 8px; }
+	#chat-send.btn { position: absolute; bottom: 0; right: 0; margin: 0; padding: 0; color: #fff; background-color: #55aa9f; width: 50px; height: 50px; line-height: 50px; text-align: center; font-size: 34px; line-height: 1; border: none; border-radius: none; }
+	#time-since { background: #e1e1e1; position: absolute; bottom: 50px; left: 0; right: 0; font-size: 10px; line-height: 18px; color: #999; text-align: center }
+
+
+/* ==|== Animations ====================================================== */
+
+
+	@-webkit-keyframes pop-in {
+		0% { -webkit-transform: scale(0.8); opacity: 0; }
+		100% { -webkit-transform: scale(1); opacity: 1; }
+	}
+
+	@-webkit-keyframes pop-out {
+		0% { -webkit-transform: scale(1); opacity: 1; }
+		100% { -webkit-transform: scale(0.8); opacity: 0; }
+	}
+
+	@-webkit-keyframes fade-in {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+	}
+
+	@-webkit-keyframes fade-out {
+		0% { opacity: 1; }
+		100% { opacity: 0; }
+	}
+
+	.pop-in { -webkit-animation: pop-in 200ms; display: block !important; opacity: 1 !important; }
+	.pop-out { -webkit-animation: pop-out 200ms; opacity: 0 !important; }
+	.fade-in { -webkit-animation: fade-in 200ms; display: block !important; opacity: 1 !important; }
+	.fade-out { -webkit-animation: fade-out 200ms; opacity: 0 !important; }
+
+
+
+@media (max-width: 600px) {
+	.chat-container {
+		left: 5px;
+		right: 5px;
+		transition: all 600ms ease;
+	}
+}
