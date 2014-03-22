@@ -7,6 +7,9 @@ angular.module('app').factory('chatApi',['socket', '$q', function(socket, $q) {
     function onUpdateUsers(callback) {
         socket.on('updateusers', callback);
     }
+    function onUpdateRooms(callback){
+        socket.on('updaterooms', callback);
+    }
 
     function switchRoom(room) {
         socket.emit('switchRoom', room);

@@ -22,8 +22,8 @@
     <script src="app.js"></script>
     <script src="ui.js"></script>
     <script src="services/session.js"></script>
-    <script src="services/chat-api.js"></script>
     <script src="services/socket-service.js"></script>
+    <script src="services/chat-api.js"></script>
     <script src="services/routes.js"></script>
     <script src="controllers/chatCtrl.js"></script>
     <script src="controllers/welcomeCtrl.js"></script>
@@ -31,8 +31,8 @@
   <!-- endbuild -->
 
 </head>
-<body ng-controller="chatCtrl">
-  <div id="container"  >
+<body >
+  <div id="container"  ng-controller="chatCtrl">
     <div id="chat-title">Chat {{room}}</div>
     <div id="choose-name" class="popup " ng-controller="welcomeCtrl"  ng-class="{false:'pop-in', true:'pop-out'}[state.welcomeShwn]">
         <span class="popup-title">Please Enter Username :</span>

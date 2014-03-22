@@ -1,5 +1,4 @@
-
-
+'use strict'
 angular.module('app').controller('welcomeCtrl', ['$scope','$rootScope','chatApi','session', function ($scope, $rootScope, chatApi, session) {
     $scope.room ="";
     $scope.name = session.getUser().username;

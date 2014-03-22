@@ -10,10 +10,10 @@ var port = process.env.PORT || 5000;
 console.log("app listeneing on %d", port);
 server.listen(port);
 
-app.use(express.static('./public'));
-
 // routing
+
 app.get('/', function (req, res) {
+	console.log('root ');
 	res.sendfile(getIndex());
 });
 
@@ -24,11 +24,22 @@ app.get('/:room', function (req, res) {
 });
 
 function getIndex () {
-	return process.env.NODE_ENV == 'production' ?
-		path.join(__dirname,'public','dist','index.html') :  path.join(__dirname,'public','index.html');
+	return path.join(__dirname,'public','index.html');
 }
 
 
+
+app.configure('development', function() {
+	console.log('development Enviorment');
+	app.use(express.static(path.join(__dirname,'public')));
+  	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+});
+app.configure('production', function() {
+	console.log('production Enviorment');
+	app.use(express.static(path.join(__dirname,'dist')));
+  	app.use(express.errorHandler());
+
+});
 
 
 

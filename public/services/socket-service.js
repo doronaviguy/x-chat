@@ -1,4 +1,4 @@
-angular.module('app').factory('socket', function ($rootScope, $window) {
+angular.module('app').factory('socket', ['$rootScope', '$window', function ($rootScope, $window) {
     var socket = $window.io.connect();
     var socketImpl = {
         on: function (eventName, callback) {
@@ -24,4 +24,4 @@ angular.module('app').factory('socket', function ($rootScope, $window) {
         console.log('ERRROR '+data);
     });
     return socketImpl;
-});
+}]);

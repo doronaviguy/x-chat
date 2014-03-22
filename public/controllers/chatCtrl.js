@@ -27,9 +27,5 @@ angular.module('app').controller('chatCtrl',['$scope', 'chatApi', 'session', fun
         );
     });
 
-    chatApi.onUpdateUsers(function (ev, data) {
-        console.log('updateusers ' + data);
-    });
-
 
 }]);
