@@ -8,6 +8,19 @@ var express = require('express'),
 
 var port = process.env.PORT || 5000;
 console.log("app listeneing on %d", port);
+//app.use(express.static(path.join(__dirname,'public')));
+app.configure('development', function() {
+	console.log('development Enviorment');
+	app.use(express.static(path.join(__dirname,'public')));
+  	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+});
+app.configure('production', function() {
+	console.log('production Enviorment');
+	app.use(express.static(path.join(__dirname,'dist')));
+  	app.use(express.errorHandler());
+
+});
+
 server.listen(port);
 
 // routing
@@ -29,17 +42,7 @@ function getIndex () {
 
 
 
-app.configure('development', function() {
-	console.log('development Enviorment');
-	app.use(express.static(path.join(__dirname,'public')));
-  	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-});
-app.configure('production', function() {
-	console.log('production Enviorment');
-	app.use(express.static(path.join(__dirname,'dist')));
-  	app.use(express.errorHandler());
 
-});
 
 
 
