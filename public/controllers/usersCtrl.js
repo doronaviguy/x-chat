@@ -2,9 +2,9 @@ angular.module('app').controller('usersCtrl', ['$scope','$rootScope','chatApi','
 	function ($scope, $rootScope, chatApi, session) {
 
 		$scope.users = null;
-
-		chatApi.onUpdateUsers(function (ev, data) {
-			$scope.users = data.users;
+		
+		chatApi.onUpdateUsers(function (users) {
+			$scope.users = users;	
 		});
 
 }]);
